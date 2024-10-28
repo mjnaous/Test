@@ -1,0 +1,18 @@
+<HTML><HEAD></HEAD>
+<BODY>
+    <script>
+        function activate() {
+            var targetURL="";
+            var targetid=id;
+            while (targetURL==""){
+                targetid--;
+                if (targetid<0) targetid=urls.length-1;
+                targetURL=urls[targetid];
+            }//wend
+
+            location.href=targetURL;
+        }//
+    </script>
+    <script src="getid.js"></script>
+</BODY>
+</HTML>

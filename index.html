@@ -1,0 +1,32 @@
+<HTML><HEAD><TITLE>webring</TITLE></HEAD>
+<BODY bgcolor=999999>
+<CENTER><B>Welcome to my GENERALINTEREST Webring!</B>
+<br/><br/><br/>
+    Would you like to join my INTERNETNEIGHBORHOOD? Let me know somehow and add this snippet to your approved web site!
+    <br/><br/>
+    
+    <!-- area where html can be copied from -->
+    <textarea id="codes" name="codes" rows="12" cols="60"></textarea>
+    
+    <br/><br/>
+    
+    <!-- div where your webring html will be displayed -->
+    <div id="ringbase"></div>
+    
+    </CENTER>
+    <script>
+        //change this to the title of your webring if you want
+        var ringtitle = "GENERAL WEBRING";
+        
+        //this can probably be left alone, but change this to your webring url base directory if required. 
+        //ex: var ringurl = "https://www.site.com/webring/";
+        var ringurl = window.location.href.replace(/[^/]*$/, '');
+        
+        //this html will be injected into the textarea and div
+        var codes="[ <a href=\""+ringurl+"\">"+ringtitle+"</a> ]<br>[<a href=\""+ringurl+"prev.html?id=0\">&lt;PREV</a> <a href=\""+ringurl+"rand.html?id=0\">RAND</a> <a href=\""+ringurl+"list.html?id=0\">LIST</a> <a href=\""+ringurl+"next.html?id=0\">NEXT&gt;</a> ]";
+        
+        document.getElementById("codes").value=codes
+        document.getElementById("ringbase").innerHTML=codes 
+    </script>
+</BODY>
+</HTML>
